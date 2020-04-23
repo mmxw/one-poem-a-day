@@ -13,10 +13,14 @@ Some friends and I have been exchanging poems everyday since the lockdown, which
 
 #### Dev Process: 
 
-  - [x] project using React and Bootstrap
+  - [x] set up project using React and Bootstrap
   - [x] get all poems from poetryDB; convert json to csv; ready to be imported to database using postgreSQL
   - [x] set up react router
   - [x] set up page layout, with 'Hope' :)
+  - [x] set up express app and psql database
+  - [x] set up proxy so the react app can make queries to the database
+  - [x] test proxy with mock api call
+
 <img src="./Frontend/take1.png" width=270 height=400>
 
 
