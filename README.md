@@ -8,3 +8,12 @@ built with React, PostgreSQL, data from [poetryDB](https://github.com/thundercom
 - [ ] can search database by lines (full line or partial line)
 - [ ] can see the full list of poems
 - [ ] can see the full list of authors and all poems by each author
+
+#### Dev Process: 
+* set up 
+  - project using React and Bootstrap
+  - get all poems from poetryDB; convert json to csv; ready to be imported to database using postgreSQL
+  - set up page layout, with 'Hope' :)
+<img src="take1.png" width=270 height=400>
+
+
