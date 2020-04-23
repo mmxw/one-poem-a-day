@@ -1,5 +1,11 @@
 * {
   box-sizing: border-box;
-  margin: 20px;
+  margin-top: 20px;
+}
+
+.poem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 

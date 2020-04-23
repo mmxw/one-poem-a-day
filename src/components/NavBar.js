@@ -1,5 +1,6 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
+import Home from './Home';
 
 export default function NavBar() {
   return (
@@ -13,9 +14,9 @@ export default function NavBar() {
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey="link-2">All Poems</Nav.Link>
-        </Nav.Item>
-        
+        </Nav.Item>    
       </Nav>
+      <Home />
     </div>
   );
 }
