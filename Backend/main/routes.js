@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-router.get('/api/hello', (req, res) => res.json('hello world'))
+router.get("/api/hello", (req, res) => res.json("hello world"));
 
-module.exports = router
+module.exports = router;
