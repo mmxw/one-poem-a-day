@@ -17,6 +17,6 @@ Some friends and I have been exchanging poems everyday since the lockdown, which
   - [x] get all poems from poetryDB; convert json to csv; ready to be imported to database using postgreSQL
   - [x] set up react router
   - [x] set up page layout, with 'Hope' :)
-<img src="take1.png" width=270 height=400>
+<img src="./Frontend/take1.png" width=270 height=400>
 
 
