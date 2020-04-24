@@ -20,6 +20,8 @@ Some friends and I have been exchanging poems everyday since the lockdown, which
   - [x] set up express app and psql database
   - [x] set up proxy so the react app can make queries to the database
   - [x] test proxy with mock api call
+  - [x] set up database using psql shell, created poems table (instead of importing from csv file)
+  
 
 <img src="./Frontend/take1.png" width=270 height=400>
 
