@@ -8,6 +8,7 @@ let csvContent = "";
 const poemCollection = [];
 poems.forEach((poemObj) => {
   const poemArr = [];
+  poemArr.push(poems.indexOf(poemObj)+1);
   poemArr.push(poemObj.author);
   poemArr.push(poemObj.title);
   poemArr.push(poemObj.lines);
@@ -15,7 +16,7 @@ poems.forEach((poemObj) => {
 });
 
 poemCollection.forEach((poemArr) => {
-  let row = poemArr.join(",");
+  let row = poemArr.join("\t");
   csvContent += row + "\r\n";
 });
 
