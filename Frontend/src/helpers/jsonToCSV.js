@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const certPath = path.join(__dirname, "./poems.json");
-const poems = JSON.parse(fs.readFileSync(certPath));
+// const certPath = path.join(__dirname, "./poems.json");
+// const poems = JSON.parse(fs.readFileSync(certPath));
+const poems = require('./poems.json')
 
 let csvContent = "";
 const poemCollection = [];
