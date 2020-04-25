@@ -8,10 +8,9 @@ router.get("/api/get/allpoems", (req, res, next) => {
   });
 });
 
-router.get("/api/get/author", (req, res, next) => {
-  const name = req.query.author;
-
-  pool.query(`SELECT * FROM poems WHERE pid=$1`, [name], (q_err, q_res) => {
+router.get("/api/get/{author_id}", (req, res, next) => {
+  const id = req.params.id
+  pool.query(`SELECT * FROM poems where author`, (q_err, q_res) => {
     res.json(q_res.rows);
   });
 });
@@ -32,7 +31,7 @@ router.post("/api/post/addpoems", (req, res, next) => {
 router.put("/api/put/editpoem", (req, res, next) => {
   const values = [req.body.author, req.body.title, req.body.poem, req.body.uid];
   pool.query(
-    `UPDATE poems SET author=$1, title=$2, poem=$3, poem_id=$4, date_created=NOW() WHERE cid=$5`,
+    `UPDATE poems SET author=$1, title=$2, poem=$3 WHERE cid=$4`,
     values,
     (q_err, q_res) => {
       res.json(q_res.rows);

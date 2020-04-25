@@ -5,7 +5,7 @@ import axios from 'axios';
 export default function Testing() {
   const [state, setState] = useState('')
   useEffect(() => {
-    axios.get('/api/hello')
+    axios.get('/api/get/allpoems')
         .then(res => setState(res.data))
   }, [])
   return (

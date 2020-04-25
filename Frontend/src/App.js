@@ -4,7 +4,7 @@ import Testing from './components/Testing';
 
 import NavBar from "./components/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <h1>Poetry Exchange</h1>
       </div>
       <NavBar />
-      <Testing />
+
       
     </Container>
   );
