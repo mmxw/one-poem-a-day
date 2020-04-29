@@ -22,6 +22,8 @@ Some friends and I have been exchanging poems everyday since the lockdown, which
   - [x] test proxy with mock api call
   - [x] set up database using psql shell, created poems table (instead of importing from csv file), copy data from csv file using psgl shell
   - [x] add express routes
+  - [x] set up queries from frontend to database
+  - [x] implement fuzzy search
   
 
 <img src="./Frontend/take1.png" width=270 height=400>
