@@ -1,21 +1,25 @@
-const createError = require("http-errors");
 const express = require("express");
-const path = require("path");
-const cookieParser = require("cookie-parser");
-const logger = require("morgan");
-
-const indexRouter = require("./routes");
-
+const bodyParser = require("body-parser");
 const app = express();
+const port = 5001;
+const db = require('./db')
 
 // view engine setup
 
-app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/", indexRouter);
+app.get("/", (req, res) => {
+  res.json({ info: "node.js, express, and postgres api" });
+});
+
+app.get('/poems', db.getAllPoems);
+app.get('/authors/:author', db.getPoemByAuthor);
+app.get('/search/:text', db.getPoemByPartialText);
+app.get('/poems/:title', db.getPoemByTitle);
+
+
+app.listen(port, () => console.log(`app running on port ${port}`));
 
 module.exports = app;
+

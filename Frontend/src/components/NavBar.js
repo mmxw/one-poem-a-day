@@ -8,7 +8,7 @@ import Poems from './Poems';
 export default function NavBar() {
   return (
     <Router>
-      <Nav fill variant="tabs" defaultActiveKey="/poem-of-the-day">
+      <Nav fill variant="tabs">
         <Nav.Item>
           <Nav.Link href="/poem-of-the-day">Poem of The Day</Nav.Link>
         </Nav.Item>
