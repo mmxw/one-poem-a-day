@@ -13,10 +13,11 @@ app.get("/", (req, res) => {
   res.json({ info: "node.js, express, and postgres api" });
 });
 
-app.get('/poems', db.getAllPoems);
-app.get('/authors/:author', db.getPoemByAuthor);
-app.get('/search/:text', db.getPoemByPartialText);
-app.get('/poems/:title', db.getPoemByTitle);
+app.get('/api/poems', db.getAllPoems);
+app.get('/api/authors', db.getAllAuthors);
+app.get('/api/authors/:author', db.getPoemByAuthor);
+app.get('/api/search/:text', db.getPoemByPartialText);
+app.get('/api/poems/:title', db.getPoemByTitle);
 
 
 app.listen(port, () => console.log(`app running on port ${port}`));

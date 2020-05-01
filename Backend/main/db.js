@@ -16,6 +16,16 @@ const getAllPoems = (req, res) => {
     res.status(200).json(results.rows);
   });
 };
+
+const getAllAuthors = (req, res) => {
+  pool.query("SELECT DISTINCT author FROM poems", (error, results) => {
+    if (error) {
+      throw error;
+    }
+    res.status(200).json(results.rows);
+  });
+};
+
 const getPoemByTitle = (req, res) => {
   const title = req.params.title;
   pool.query(
@@ -32,8 +42,7 @@ const getPoemByTitle = (req, res) => {
 const getPoemByAuthor = (req, res) => {
   const author = req.params.author;
   pool.query(
-    "SELECT * FROM poems WHERE author=$1",
-    [author],
+    `SELECT * FROM poems WHERE author ILIKE %${author}%`,
     (error, results) => {
       if (error) {
         throw error;
@@ -45,7 +54,7 @@ const getPoemByAuthor = (req, res) => {
 const getPoemByPartialText = (req, res) => {
   const text = req.params.text;
   pool.query(
-    `SELECT * FROM poems WHERE poem LIKE '%${text}%'`,
+    `SELECT * FROM poems WHERE poem ILIKE '%${text}%'`,
     (error, results) => {
       if (error) {
         throw error;
@@ -58,6 +67,7 @@ const getPoemByPartialText = (req, res) => {
 module.exports = {
   getAllPoems,
   getPoemByTitle,
+  getAllAuthors,
   getPoemByAuthor,
   getPoemByPartialText
 };
